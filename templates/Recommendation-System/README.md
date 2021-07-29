@@ -12,7 +12,7 @@ Link to youtube demo: https://www.youtube.com/watch?v=dhVePtyECFw -->
 
 > #### Use this URL - https://the-movie-buff.herokuapp.com/ - in case if you see application error in the above mentioned URL -->
 
-## The Movie Cinema
+<!-- ## The Movie Cinema
 
 I've developed a similar application called "The Movie Cinema" which supports all language movies. But the only thing that differs from this application is that I've used the TMDB's recommendation engine in "The Movie Cinema". The recommendation part developed by me in this application doesn't support for multi-language movies as it consumes 200% of RAM (even after deploying it to Heroku) for generating Count Vectorizer matrix for all the 700,000+ movies in the TMDB. 
 
@@ -20,7 +20,7 @@ Link to "The Movie Cinema" application: https://the-movie-cinema.herokuapp.com/
 
 Don't worry if the movie that you are looking for is not auto-suggested. Just type the movie name and click on "enter". You will be good to go eventhough if you made some typo errors.
 
-Source Code: https://github.com/agrawalanshul053/Website-final/edit/main/templates/Recommendation-System/
+Source Code: https://github.com/agrawalanshul053/Website-final/edit/main/templates/Recommendation-System/ -->
 <!-- 
 ## Featured in Krish's Live Session on YouTube
 
