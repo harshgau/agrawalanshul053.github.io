@@ -98,14 +98,31 @@ def recommend():
     Word_Meaning = data['4'][0]
     Purport = "The topics discussed by Dhṛtarāṣṭra and Sañjaya, as described in the Mahābhārata, form the basic principle for this great philosophy. It is understood that this philosophy evolved on the Battlefield of Kurukṣetra, which is a sacred place of pilgrimage from the immemorial time of the Vedic age. It was spoken by the Lord when He was present personally on this planet for the guidance of mankind."
 
+    # casts = {}
+    # cast_details = {}
+    # temp = data['9'][0]
+    # count = 0
+    # for id in temp:
+    #     for j in range(len(data['0'])):
+    #         if id == data['0'][j]:
+    #             print("hello")
+    #             casts[data['id'][j]] = [data['0'][j], data['1'][j]]
+    #             cast_details[data['id'][j]] =  [data['0'][j], data['1'][j], data['4'][j],
+    #                                 data['5'][j], data['6'][j][8:]]
+    #             break
+    #     count+=1
+    #     if count==10:
+    #         break
+
     casts = {data['id'][i]: [data['0'][i], data['1'][i]]
-             for i in range(10)}  # Showing ten custom
+             for i in [157,516,792,890,1767,2068,3018,4467,4802,4925]}  # Showing ten custom
 
     cast_details = {data['id'][i]: [data['0'][i], data['1'][i], data['4'][i],
-                                    data['5'][i], data['6'][i][8:]] for i in range(10)}  # we will add another list for Purport
+                                    data['5'][i], data['6'][i][8:]] for i in [157,516,792,890,1767,2068,3018,4467,4802,4925]}  # we will add another list for Purport
 
     return render_template('recommend_test.html', Id=Id, Shloka=Shloka, Exact_meaning=Exact_meaning, Word_Meaning=Word_Meaning, Purport=Purport, casts=casts, cast_details=cast_details)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.debug = True
+    app.run(host='0.0.0.0',port = 3000)

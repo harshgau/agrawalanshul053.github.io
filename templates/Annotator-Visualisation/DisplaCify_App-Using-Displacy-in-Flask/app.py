@@ -8,7 +8,7 @@ from spacy import displacy
 from stanza.utils.conll import CoNLL
 nlp = spacy.load('en_core_web_sm')
 
-HTML_WRAPPER = """<div style=" border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 1rem">{}</div>"""
+HTML_WRAPPER = """<div style=" border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 1rem; font-size: 22px">{}</div>"""
 
 
 app = Flask(__name__)
@@ -34,8 +34,8 @@ def extract():
     if request.method == 'POST':
         raw_text = request.form['rawtext']
         docx = nlp(raw_text)
-        print(str(docx))
-        print(type(docx))
+        # print(str(docx))
+        # print(type(docx))
         html = displacy.render(docx, style="dep")
         html = Sanskrit.get_sans_html(filename='test.conll')
         html = html.replace("\n\n", "\n")
